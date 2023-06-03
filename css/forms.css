@@ -55,7 +55,7 @@ textarea {
     --active: #BB86FC;
     --active-inner: #fff;
     --focus: 0.5px #f6f8ff;
-    --border: #222222;
+    --border: #5c5c5c;
     --border-hover: #BB86FC;
     --background: #fff;
     --disabled: #f6f8ff;
@@ -186,7 +186,6 @@ textarea {
   --mouse-y: 50;
   background-size: 200% 200%;
   background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
-  background-image: radial-gradient(circle at center, #FF385C 0%, #e61e4d 27.5%, #e31c5f 40%, #d70466 57.5%, #bd1e59 75%, #bd1e59 100%);
   cursor: pointer;
   color: #fff;
   font-size: 14px;
@@ -198,7 +197,7 @@ textarea {
 
 /* btn-icon */
 .btn-icon {
-  padding: 12px;
+  padding: 10px 11px;
   border-radius: 50%;
 }
 

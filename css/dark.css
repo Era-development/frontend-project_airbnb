@@ -1,6 +1,9 @@
 :root {
   --body-color: #292929; /* общий фон */
 
+  --bg-body: #424242;
+
+
   --title-color: #ffffff; /* цвет заголовков */
   --subtitle-color: #B4BBC5;/* цвет подзаголовков */
 
@@ -8,13 +11,29 @@
 
   --accent-color: #BB86FC; /* основной цвет тем */
 
-  --bg-hover: rgba(255, 255, 255, 0.12);
+  --bg-hover: #ffffff1f;
+
+  --banner-title: rgb(255, 187, 60);
+
+  --box-shadow: 0 1px 2px #61616140;
   
+  --line-footer: 1px solid #777777;
+
+  --bg-footer: var(--body-color);
 }
 
 /* logo */
-.header-logo svg {
-  --logo-fill: #ffffff;
+.header-logo svg path {
+  fill: var(--accent-color);
+}
+
+.card-text__rating, .card-text__title, .card-text svg path {
+  color: var(--title-color);
+  fill: var(--subtitle-color);
+}
+
+.text-secondary {
+  color: var(--subtitle-color);
 }
 
 
@@ -24,10 +43,11 @@
   --button-text-color: #000000;
 }
 
-/* btn-ghost */
-.btn-ghost {
-
+.btn-airbnb {
+  background-image: radial-gradient(circle at center, #b277fc 0%, #a66aee 27.5%, #8243ce 40%, #602ba0 57.5%, #4e08a3 75%, #3108a3 100%);
 }
+
+/* btn-ghost */
 
 
 /* forms */
@@ -37,4 +57,32 @@ input[type='password'],
 textarea {
   --input-bg-color: #F6F6F6;
   --input-border-color: #D2D2D2;
+}
+
+.price-current {
+  color: var(--title-color);
+}
+
+.footer-top__column h3 {
+  color: #777;
+}
+
+.footer-bottom__row h3 {
+  color: var(--title-color);
+}
+
+.footer-bottom__row:nth-child(1) .footer-link::before {
+  background: var(--title-color);
+}
+
+.footer-bottom__row button {
+  color: var(--title-color);
+}
+
+.footer-buttom_row button:hover {
+  background-color: var(--bg-hover);
+}
+
+.mr-8:hover {
+  background-color: var(--bg-hover);
 }

@@ -1,20 +1,27 @@
 :root {
   --body-color: #ffffff; /* общий фон */
 
+  --bg-body: var(--body-color);
+
 
   --title-color: #222222; /* цвет заголовков */
   --subtitle-color: #42526B; /* цвет подзаголовков */
 
   --nav-link-color: #222222; /* цвет ссылок в навигации */
 
-  --accent-color: #FF385C; /* основной цвет тем */
+  --accent-color: #fd6060; /* основной цвет тем */
 
   --bg-hover: #F7F7F7;
-}
 
-/* logo */
-.header-logo svg {
-  --logo-fill: #22222;
+  --banner-title: #fd7b7b;
+
+  --text-secondary: #5E5E5E;
+
+  --box-shadow: 0 1px 2px #00000040;
+
+  --line-footer: 1px solid #dddddd;
+
+  --bg-footer: var(--bg-hover);
 }
 
 
@@ -25,9 +32,6 @@
 }
 
 /* btn-ghost */
-.btn-ghost {
-  
-}
 
 
 /* forms */
@@ -40,6 +44,29 @@ textarea {
   --input-border-color: #B0B0B0;
 }
 
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.footer-bottom__row:nth-child(1) .footer-link::before {
+  background: var(--nav-link-color);
+}
+
+.footer-bottom__row button {
+  color: #222;
+}
+
+.mr-8:hover {
+  background-color: #e0e0e0;
+}
+
+.footer-bottom__row button:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-airbnb {
+  background-image: radial-gradient(circle at center, #fc6060 0%, #f14b4b 27.5%, #f04242 40%, #df3d3d 57.5%, #c42b2b 75%, #c42b2b 100%);
+}
 
 
 

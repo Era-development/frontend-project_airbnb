@@ -95,6 +95,10 @@ textarea:focus {
   --checkbox-border-color: #B0B0B0;
 }
 
+.dropdown-line {
+  --dropdown-line: #ddd;
+}
+
 
 
 

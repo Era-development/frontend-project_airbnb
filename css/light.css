@@ -9,7 +9,7 @@
 
   --nav-link-color: #222222; /* цвет ссылок в навигации */
 
-  --accent-color: #fd6060; /* основной цвет тем */
+  --accent-color: #fc6060; /* основной цвет тем */
 
   --bg-hover: #F7F7F7;
 
@@ -22,16 +22,24 @@
   --line-footer: 1px solid #dddddd;
 
   --bg-footer: var(--bg-hover);
+
+  --label-color: #717171; /* цвет текста label, placeholder */
+
+  --switch-hover: #b6b6b6;
 }
 
 
 /* btn-primary */
 .btn-primary {
-  --button-bg-color: #FF385C;
-  --button-text-color: #ffffff;
+  --button-bg-color: #fc6060;
+  --button-content-color: #ffffff;
 }
 
-/* btn-ghost */
+/* btn-dark */
+/*.btn-dark {
+  --button-content-color: #fff;
+  --button-bg-color: #222222;
+}*/
 
 
 /* forms */
@@ -42,6 +50,12 @@ input[type="tel"],
 textarea {
   --input-bg-color: #ffffff;
   --input-border-color: #B0B0B0;
+  --input-text-color: #222222;
+}
+
+input:not([type="checkbox"]):focus,
+textarea:focus {
+  --box-shadow: inset 0 0 0 2px var(--banner-title);
 }
 
 .text-secondary {
@@ -67,6 +81,15 @@ textarea {
 .btn-airbnb {
   background-image: radial-gradient(circle at center, #fc6060 0%, #f14b4b 27.5%, #f04242 40%, #df3d3d 57.5%, #c42b2b 75%, #c42b2b 100%);
 }
+
+/* чекбокс в модалке */
+.modal-checkbox {
+  --checkbox-bg-color-default: #ffffff;
+  --checkbox-bg-color-checked: #fc6060;
+  --checkbox-mark-color: #ffffff;
+  --checkbox-border-color: #B0B0B0;
+}
+
 
 
 

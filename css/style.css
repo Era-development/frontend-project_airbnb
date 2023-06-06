@@ -493,7 +493,11 @@ h3 {
 
 
 
-/* атомарные классы */
+/* утилиты, атомарные классы */
+.mt-16 {
+  margin-top: 16px;
+}
+
 
 .inline {
   display: inline-block;

@@ -68,7 +68,7 @@
 .modal-header {
   position: relative;
   min-height: 64px;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid var(--bg-hover);
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 24px;
@@ -94,7 +94,8 @@
 }
 
 .modal-footer {
-  padding: 24px 24px 38px 24px;
+  /*padding: 24px 24px 38px 24px;*/
+  padding: 10px 24px 10px 24px; /* временный padding */
 }
 
 .modal-footer span {

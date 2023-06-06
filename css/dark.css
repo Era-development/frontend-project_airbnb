@@ -22,6 +22,13 @@
   --bg-footer: var(--body-color);
 
   --label-color: rgba(255, 255, 255, 0.38); /* цвет текста label, placeholder */
+
+  /* dropdown */
+  --dropdown-button-bg: #292929;
+  --dropdown-border-color: rgba(255, 255, 255, 0.3);
+  --dropdown-box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
+
+  --dropdown-shadow: #00000050;
 }
 
 /* logo */

@@ -549,7 +549,7 @@ h3 {
  
 
 .dropdown-line {
-  background-color: #ddd;
+  background-color:var(--dropdown-line);
   height: 1px;
   width: 100%;
   margin: 8px 0;

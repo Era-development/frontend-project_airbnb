@@ -26,8 +26,13 @@
   --label-color: #717171; /* цвет текста label, placeholder */
 
   --switch-hover: #b6b6b6;
-}
 
+   /* dropdown */
+   --dropdown-button-bg: #ffffff;
+   --dropdown-border-color: #ddd;
+   --dropdown-box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+   --dropdown-shadow: #0000001f;
+}
 
 /* btn-primary */
 .btn-primary {

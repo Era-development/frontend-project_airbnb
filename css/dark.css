@@ -117,3 +117,7 @@ textarea:focus {
   --checkbox-mark-color: #222222;
   --checkbox-border-color: rgba(255, 255, 255, 0.6);
 }
+
+.dropdown-line {
+  --dropdown-line: var(--bg-hover);
+}

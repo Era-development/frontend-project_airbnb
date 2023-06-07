@@ -1,14 +1,18 @@
 # frontend-project_airbnb
-### test repository for lessons (html, css)
+ test repository for lessons (html, css)
 
-### Instructions
-### Download application
-### Run terminal inside this folder
-### npm install --global http-server
-###Then you can run the server
+## Instructions
 
-### npx http-server
+* Download application
+* Run terminal inside this folder
+* npm install --global http-server 
 
-Browse to http://10.1.34.245:8080
+**Then you can run the server**
 
-Live Demo https://era-development.github.io/frontend-project_airbnb/
+'''bash
+npx http-server
+'''
+
+Browse to [http://10.1.34.245:8080](http://10.1.34.245:8080)
+
+Live Demo [https://era-development.github.io/frontend-project_airbnb/](https://era-development.github.io/frontend-project_airbnb/)

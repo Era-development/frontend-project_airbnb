@@ -9,9 +9,9 @@
 
 **Then you can run the server**
 
-'''bash
+```bash
 npx http-server
-'''
+```
 
 Browse to [http://10.1.34.245:8080](http://10.1.34.245:8080)
 

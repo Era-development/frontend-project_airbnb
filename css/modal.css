@@ -12,6 +12,10 @@
   animation-name: slide;
 }
 
+.modal:focus-visible {
+  outline: none;
+}
+
 @keyframes slide {
   0% {
     opacity: 0;
@@ -84,6 +88,7 @@
   margin-bottom: 24px;
   line-height: 30px;
   color: var(--title-color);
+  user-select: none;
 }
 
 .modal-subtitle {
@@ -91,6 +96,7 @@
   margin-bottom: 24px;
   line-height: 30px;
   color: var(--subtitle-color);
+  user-select: none;
 }
 
 .modal-footer {

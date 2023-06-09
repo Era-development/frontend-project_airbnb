@@ -29,6 +29,14 @@
   --dropdown-box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
 
   --dropdown-shadow: #00000050;
+
+  /* search-menu*/
+  --search-menu-shadow: rgba(0, 0, 0, 0.473);
+
+
+  
+    /* btn-search*/
+    --btn-search: radial-gradient(circle at center, #b277fc 0%, #a66aee 40%, #8243ce 57.5%, #602ba0 75%, #602ba0 100%);
 }
 
 /* logo */
@@ -52,7 +60,8 @@
   --button-content-color: #000000;
 }
 
-.btn-airbnb {
+.btn-airbnb,
+.log-in_link {
   background-image: radial-gradient(circle at center, #b277fc 0%, #a66aee 27.5%, #8243ce 40%, #602ba0 57.5%, #4e08a3 75%, #3108a3 100%);
 }
 
@@ -120,4 +129,12 @@ textarea:focus {
 
 .dropdown-line {
   --dropdown-line: var(--bg-hover);
+}
+
+.block-image {
+  --image-color: var(--bg-hover);
+}
+
+.tabs-active::after {
+  --tabs-after:   #7300ff ;
 }

@@ -5,7 +5,7 @@ input[type="tel"],
 textarea {
   font-family: 'Messina-Sans', sans-serif;
   background: var(--input-bg-color);
-  padding: 10px 16px;
+  padding: 10px 8px;
   min-height: 40px;
   margin-bottom: 12px;
   box-sizing: border-box;
@@ -13,7 +13,7 @@ textarea {
   border-radius: 6px;
   outline: none;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--input-text-color);
   width: 400px;
 }
@@ -24,20 +24,22 @@ input[type='email']::placeholder,
 input[type='password']::placeholder,
 input[type="tel"]::placeholder,
 textarea::placeholder {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--label-color);
 }
 
 input:not([type="checkbox"]):focus,
+input:not([type="search"]):focus,
 textarea:focus {
   box-shadow: var(--box-shadow);
 }
 
 label {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--label-color);
   display: block;
   margin-bottom: 6px;
+  user-select: none;
 }
 
 textarea {
@@ -337,7 +339,7 @@ textarea {
 
 /* btn-icon */
 .btn-icon {
-  padding: 10px 11px;
+  padding: 10px 12px;
   border-radius: 50%;
 }
 
@@ -358,9 +360,31 @@ textarea {
 }
 
 
+/* btn-search */
+.btn-search {
+  padding: 9px;
+  border-radius: 50%;
+  background-image: var(--btn-search);
+  margin-right: 8px;
+  min-height: 34px
+}
+
+.btn-search svg {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+button .mr-5 {
+  vertical-align: text-top;
+}
+
+
 /* btn-ghost */
 .btn-ghost {
   color: var(--nav-link-color);
+  font-size: 13px;
+  min-width: 144px;
 }
 
 .btn-ghost:hover {

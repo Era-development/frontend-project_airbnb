@@ -7,7 +7,6 @@ window.addEventListener('load', () => {
   })
 })
 
-
 /* button-airbnb */
 const buttonsAirBnb = document.querySelectorAll('.btn-airbnb');
 
@@ -23,7 +22,6 @@ buttonsAirBnb.forEach((button) => {
   })
 })
 
-
 /* иконки heart */
 const hearts = document.querySelectorAll('.card-heart');
 
@@ -32,7 +30,6 @@ hearts.forEach(heart => {
     heart.classList.toggle('heart-active');
   })
 })
-
 
 /* header links */
 const links = document.querySelectorAll('.header-nav__link');
@@ -43,7 +40,6 @@ links.forEach(link => {
     event.currentTarget.classList.add('link-active');
   })
 })
-
 
 /* dropdown */
 const dropDownButton = document.querySelector('.dropdown-button');
@@ -62,7 +58,6 @@ document.addEventListener('click', (event) => {
   }
 })
 
-
 /* init swiper banner */
 const swiper = new Swiper('.swiper', {
   // Optional parameters
@@ -75,7 +70,6 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
-
 
 /* модалка become a host */
 const modal = document.querySelector('#modal'); // получение доступа к модалке

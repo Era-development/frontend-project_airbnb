@@ -31,7 +31,14 @@
    --dropdown-button-bg: #ffffff;
    --dropdown-border-color: #ddd;
    --dropdown-box-shadow: 0 2px 4px rgba(0,0,0,0.18);
-   --dropdown-shadow: #0000001f;
+   --dropdown-shadow: hsla(0, 0%, 0%, 0.122);
+
+  /* search-menu*/
+   --search-menu-shadow: rgba(0, 0, 0, 0.28);
+
+
+    /* btn-search*/
+   --btn-search: radial-gradient(circle at center, #fc6f6f 0%, #f56262 40%, #f04242 57.5%, #df3d3d 75%, #c42b2b 100%);
 }
 
 /* btn-primary */
@@ -83,7 +90,8 @@ textarea:focus {
   background-color: #e0e0e0;
 }
 
-.btn-airbnb {
+.btn-airbnb,
+.log-in_link {
   background-image: radial-gradient(circle at center, #fc6060 0%, #f14b4b 27.5%, #f04242 40%, #df3d3d 57.5%, #c42b2b 75%, #c42b2b 100%);
 }
 
@@ -97,6 +105,14 @@ textarea:focus {
 
 .dropdown-line {
   --dropdown-line: #ddd;
+}
+
+.block-image {
+  --image-color: #ebebeb;
+}
+
+.tabs-active::after {
+  --tabs-after: var(--nav-link-color);
 }
 
 

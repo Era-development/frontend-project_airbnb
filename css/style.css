@@ -4,6 +4,8 @@
 @import "../lib/swiper.css";
 @import "../css/modal.css";
 @import "../css/help.css";
+@import "../css/tabs.css";
+@import "../css/help-details.css";
 
 
 
@@ -588,7 +590,6 @@ h3 {
 
 
 
-
 /* утилиты, атомарные классы */
 .mt-16 {
   margin-top: 16px;
@@ -602,12 +603,6 @@ h3 {
 
 .ml-8 {
   margin-left: 8px;
-}
-
-.flex-start {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
 }
 
 .flex {

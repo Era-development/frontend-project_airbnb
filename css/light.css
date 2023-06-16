@@ -27,6 +27,10 @@
 
   --switch-hover: #b6b6b6;
 
+  --swiper-color: #a77979af;
+
+  --help-detail-color: var(--title-color);
+
    /* dropdown */
    --dropdown-button-bg: #ffffff;
    --dropdown-border-color: #ddd;
@@ -111,7 +115,7 @@ textarea:focus {
   --image-color: #ebebeb;
 }
 
-.tabs-active::after {
+.tabs-btn__active::after {
   --tabs-after: var(--nav-link-color);
 }
 

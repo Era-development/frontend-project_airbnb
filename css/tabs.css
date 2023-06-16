@@ -1,0 +1,235 @@
+
+  /* tabs*/
+  .wrapper-1 {
+    padding: 0 124px;
+  }
+  
+  .wrapper-1 h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 56px;
+    font-weight: bold;
+    color: var(--title-color);
+  }
+
+  .tabs {
+    display: flex;
+    align-items: start;
+    min-height: 50px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 56px;
+  }
+
+  .tabs-btn:nth-child(1) {
+    margin: 6px 6px 6px -10px;
+  }
+
+  .tabs-btn {
+    padding: 10px;
+    font-size: 16px;
+    color: var(--label-color);
+    margin: 6px 6px 6px 0;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+    border-radius: 6px;
+    border: 0;
+    outline: none;
+    min-height: 40px;
+  }
+
+  .tabs-btn:last-child {
+    margin: 6px 0;
+  }
+
+  .tabs-btn:hover {
+    background-color: var(--bg-hover);
+  }
+
+  .tabs-btn::after,
+  .tabs-btn__active:after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    width: calc(100% - 20px);
+    height: 2px;
+    height: 2px;
+    inset-inline: 0;
+    transform: scaleX(1);
+    transition: transform 0.2s ease;
+    left: 10px;
+  }
+  
+  /* активная ссылка должна быть непрозрачной */
+  .tabs-btn__active:hover::after {
+    opacity: 1;
+  }
+  
+  /* анимация линии при наведении на активную ссылку */
+  .tabs-btn__active::after {
+    background-color: var(--tabs-after);
+    transform: scaleX(1);
+  }
+
+  .tabs-btn:active {
+    transform: scale(0.96);
+    transition: box-shadow 30s cubic-bezier(0.2,0,0,1),transform 0.1s cubic-bezier(0.2,0,0,1); 
+  }
+
+  .tabs-btn__active {
+    color: var(--title-color);
+  }
+
+  .tabs-content {
+    display: none;
+  }
+  
+  .tabs-content__active {
+    display: block;
+    margin-bottom: 100px;
+  }
+
+  .log-in_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    margin-bottom: 64px;
+  }
+
+  .log-in_text h2 {
+    margin-bottom: 8px;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 600;
+    color: var(--title-color);
+  }
+
+  .log-in_text p {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--title-color);
+  }
+
+  .log-in_link span {
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+
+  .log-in_link {
+    --mouse-x: 50;
+    --mouse-y: 50;
+    background-size: 200% 200%;
+    background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
+    cursor: pointer;
+    text-transform: initial;
+    text-align: center;
+    border-radius: 6px;
+    padding: 14px 75px;
+    width: 400px;
+    min-height: 48px;
+  }
+
+  .guide-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  
+  .guide-info__title {
+     font-size: 26px;
+     font-weight: 600;
+     color: var(--title-color);
+  }
+
+  .guide-info__title:last-of-type {
+    margin-bottom: 50px;
+  }
+
+  .guide-info a {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .guide-info span:nth-child(2) {
+    margin-left: 4px;
+  }
+
+
+  
+  /* карточки на стр help с использованием специфичности */
+  .flex-start__help {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flex-start__help .card-wrapper__help {
+    width: 254px;
+  }
+  
+  .flex-start__help .card-image__help {
+    min-height: 254px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .flex-start__help .card-image__help img {
+    max-width: 100%;
+    height: 254px;
+    vertical-align: middle;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .card-text__help { 
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--title-color);
+    max-width: 100%;
+  } 
+
+
+  /* json */
+ .array-wrapper {
+    min-height: 200px;
+ }
+
+  .card-array {
+    height: 132px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .card-text__name {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 4px;
+    color: var(--title-color)
+  }
+
+  .card-text__description {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--label-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .swiper-scrollbar-drag {
+    background: var(--swiper-color);
+}
+

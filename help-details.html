@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help-details page</title>
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)">
+
+  <script type="module">
+    // https://doka.guide/js/match-media/
+    if (matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+      document.documentElement.style.display = 'none';
+      document.head.insertAdjacentHTML(
+        'beforeend',
+        '<link rel="stylesheet" href="styles/light.css" onload="document.documentElement.style.display=\'\'">'
+      );
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="flex">
+        <a href="index.html" class="header-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="109" height="35" viewBox="0 0 109 35" fill="none">
+            <g clip-path="url(#clip0_202_1081)">
+              <path
+                d="M57.4454 8.79379C57.4454 10.0551 56.4579 11.0711 55.232 11.0711C54.0062 11.0711 53.0187 10.0551 53.0187 8.79379C53.0187 7.53253 53.9721 6.51652 55.232 6.51652C56.4919 6.55155 57.4454 7.56757 57.4454 8.79379ZM48.3195 13.3834C48.3195 13.5936 48.3195 13.9439 48.3195 13.9439C48.3195 13.9439 47.2639 12.5425 45.0165 12.5425C41.3048 12.5425 38.4104 15.4504 38.4104 19.4795C38.4104 23.4735 41.2708 26.4164 45.0165 26.4164C47.2979 26.4164 48.3195 24.98 48.3195 24.98V25.5756C48.3195 25.8559 48.5238 26.0661 48.7962 26.0661H51.5544V12.8929C51.5544 12.8929 49.0346 12.8929 48.7962 12.8929C48.5238 12.8929 48.3195 13.1381 48.3195 13.3834ZM48.3195 21.8268C47.8087 22.5976 46.7872 23.2633 45.5613 23.2633C43.382 23.2633 41.7134 21.8619 41.7134 19.4795C41.7134 17.0971 43.382 15.6957 45.5613 15.6957C46.7531 15.6957 47.8428 16.3964 48.3195 17.1321V21.8268ZM53.5975 12.8929H56.8665V26.0661H53.5975V12.8929ZM102.428 12.5425C100.18 12.5425 99.1249 13.9439 99.1249 13.9439V6.55155H95.8559V26.0661C95.8559 26.0661 98.3757 26.0661 98.6141 26.0661C98.8865 26.0661 99.0908 25.8208 99.0908 25.5756V24.98C99.0908 24.98 100.146 26.4164 102.394 26.4164C106.106 26.4164 109 23.4735 109 19.4795C109 15.4855 106.105 12.5425 102.428 12.5425ZM101.883 23.2282C100.623 23.2282 99.6357 22.5626 99.1249 21.7918V17.0971C99.6357 16.3964 100.725 15.6607 101.883 15.6607C104.062 15.6607 105.731 17.0621 105.731 19.4444C105.731 21.8268 104.062 23.2282 101.883 23.2282ZM94.1533 18.2533V26.1011H90.8843V18.6386C90.8843 16.4665 90.2033 15.5906 88.3645 15.5906C87.377 15.5906 86.3554 16.1161 85.7084 16.8869V26.0661H82.4395V12.8929H85.0274C85.2998 12.8929 85.5041 13.1381 85.5041 13.3834V13.9439C86.4576 12.9279 87.7175 12.5425 88.9774 12.5425C90.4076 12.5425 91.5994 12.963 92.5529 13.8038C93.7106 14.7848 94.1533 16.046 94.1533 18.2533ZM74.5054 12.5425C72.258 12.5425 71.2023 13.9439 71.2023 13.9439V6.55155H67.9334V26.0661C67.9334 26.0661 70.4532 26.0661 70.6916 26.0661C70.964 26.0661 71.1683 25.8208 71.1683 25.5756V24.98C71.1683 24.98 72.2239 26.4164 74.4713 26.4164C78.183 26.4164 81.0774 23.4735 81.0774 19.4795C81.1114 15.4855 78.217 12.5425 74.5054 12.5425ZM73.9605 23.2282C72.7006 23.2282 71.7131 22.5626 71.2023 21.7918V17.0971C71.7131 16.3964 72.8028 15.6607 73.9605 15.6607C76.1399 15.6607 77.8084 17.0621 77.8084 19.4444C77.8084 21.8268 76.1399 23.2282 73.9605 23.2282ZM65.1071 12.5425C66.0946 12.5425 66.6053 12.7177 66.6053 12.7177V15.8358C66.6053 15.8358 63.8812 14.8899 62.1786 16.8869V26.1011H58.9096V12.8929C58.9096 12.8929 61.4295 12.8929 61.6678 12.8929C61.9402 12.8929 62.1446 13.1381 62.1446 13.3834V13.9439C62.7575 13.2082 64.0855 12.5425 65.1071 12.5425ZM31.1574 24.8749C30.9871 24.4545 30.8168 23.999 30.6466 23.6136C30.3742 22.983 30.1018 22.3874 29.8634 21.8268L29.8293 21.7918C27.4798 16.5365 24.9599 11.2112 22.3039 5.95596L22.2017 5.74575C21.9293 5.22022 21.6569 4.65966 21.3845 4.0991C21.044 3.46847 20.7034 2.8028 20.1586 2.17217C19.069 0.770771 17.5026 0 15.834 0C14.1314 0 12.5991 0.770771 11.4754 2.1021C10.9646 2.73273 10.59 3.3984 10.2495 4.02903C9.9771 4.58959 9.70469 5.15015 9.43227 5.67568L9.33012 5.88589C6.70812 11.1411 4.15423 16.4665 1.80466 21.7217L1.7706 21.7918C1.53224 22.3524 1.25983 22.9479 0.987412 23.5786C0.817153 23.964 0.646893 24.3844 0.476634 24.8398C0.0339598 26.1361 -0.102248 27.3624 0.0680117 28.6236C0.442582 31.2512 2.14517 33.4585 4.49475 34.4394C5.3801 34.8248 6.2995 35 7.25295 35C7.52537 35 7.86589 34.965 8.1383 34.9299C9.26201 34.7898 10.4198 34.4044 11.5435 33.7387C12.9396 32.9329 14.2676 31.7768 15.7659 30.0951C17.2642 31.7768 18.6263 32.9329 19.9884 33.7387C21.1121 34.4044 22.2698 34.7898 23.3935 34.9299C23.6659 34.965 24.0065 35 24.2789 35C25.2323 35 26.1858 34.8248 27.0371 34.4394C29.4207 33.4585 31.0893 31.2162 31.4638 28.6236C31.7362 27.3974 31.6 26.1712 31.1574 24.8749ZM15.8 26.6967C13.9612 24.3143 12.7694 22.0721 12.3607 20.1802C12.1905 19.3744 12.1564 18.6737 12.2586 18.043C12.3267 17.4825 12.531 16.992 12.8034 16.5716C13.4504 15.6256 14.5401 15.03 15.8 15.03C17.0599 15.03 18.1836 15.5906 18.7965 16.5716C19.069 16.992 19.2733 17.4825 19.3414 18.043C19.4435 18.6737 19.4095 19.4094 19.2392 20.1802C18.8306 22.037 17.6388 24.2793 15.8 26.6967ZM29.3867 28.3433C29.1483 30.1652 27.9565 31.7417 26.2879 32.4424C25.4707 32.7928 24.5854 32.8979 23.7 32.7928C22.8487 32.6877 21.9974 32.4074 21.1121 31.8819C19.8862 31.1812 18.6603 30.0951 17.2301 28.4835C19.4776 25.6456 20.8396 23.0531 21.3504 20.7407C21.5888 19.6547 21.6228 18.6737 21.5207 17.7628C21.3845 16.8869 21.078 16.0811 20.6013 15.3804C19.5457 13.8038 17.775 12.8929 15.8 12.8929C13.825 12.8929 12.0543 13.8388 10.9987 15.3804C10.5219 16.0811 10.2155 16.8869 10.0793 17.7628C9.94305 18.6737 9.9771 19.6897 10.2495 20.7407C10.7603 23.0531 12.1564 25.6807 14.3698 28.5185C12.9737 30.1301 11.7137 31.2162 10.4879 31.9169C9.60253 32.4424 8.75124 32.7227 7.89994 32.8278C6.98054 32.9329 6.09519 32.7928 5.312 32.4775C3.64346 31.7768 2.45164 30.2002 2.21328 28.3784C2.11112 27.5025 2.17923 26.6266 2.51975 25.6456C2.6219 25.2953 2.79216 24.9449 2.96242 24.5245C3.20078 23.964 3.4732 23.3684 3.74561 22.7728L3.77966 22.7027C6.12924 17.4825 8.64908 12.1572 11.2711 6.97197L11.3732 6.76176C11.6456 6.23624 11.9181 5.67568 12.1905 5.15015C12.4629 4.58959 12.7694 4.06406 13.1439 3.60861C13.859 2.76777 14.8125 2.31231 15.8681 2.31231C16.9237 2.31231 17.8771 2.76777 18.5922 3.60861C18.9668 4.06406 19.2733 4.58959 19.5457 5.15015C19.8181 5.67568 20.0905 6.23624 20.3629 6.76176L20.4651 6.97197C23.053 12.1922 25.5729 17.5175 27.9224 22.7377V22.7728C28.1948 23.3333 28.4332 23.964 28.7056 24.5245C28.8759 24.9449 29.0461 25.2953 29.1483 25.6456C29.4207 26.5566 29.5229 27.4324 29.3867 28.3433Z"
+                fill="#fc6060" />
+            </g>
+            <defs>
+              <clipPath id="clip0_202_1081">
+                <rect width="109" height="35" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+
+
+        <div class="help-search__wrapper">
+          <form class="help-search" action="#" role="search">
+            <input class="input-search" type="search" maxlength="100" placeholder="Search how-tos and more">
+
+            <button class="btn btn-search">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                focusable="false"
+                style="display: block; fill: none; height: 16px; width: 16px; stroke: #fff; stroke-width: 4; overflow: visible;">
+                <path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path>
+              </svg>
+            </button>
+
+            <div class="search-menu">
+
+              <h3>Top articles</h3>
+
+              <div class="search-menu__article search-menu__items">
+                <div class="block-image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                    focusable="false" style="display: block; height: 24px; width: 24px; fill: currentcolor;">
+                    <path
+                      d="M25 3a2 2 0 0 1 2 1.85V7h2a2 2 0 0 1 2 1.85V26a3 3 0 0 1-3 3H4a3 3 0 0 1-3-2.82V5a2 2 0 0 1 1.85-2H3zm4 6h-2v17a1 1 0 0 0 2 .12V26zm-4-4H3v21a1 1 0 0 0 .88 1H25zM13 21v2H7v-2zm8 0v2h-6v-2zm-8-4v2H7v-2zm8 0v2h-6v-2zm0-8v6H7V9zm-2 2H9v2h10z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="block-description">
+                  <p>Canceling your reservation for a stay</p>
+                </div>
+              </div>
+
+              <div class="search-menu__article search-menu__items">
+                <div class="block-image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                    focusable="false" style="display: block; height: 24px; width: 24px; fill: currentcolor;">
+                    <path
+                      d="M25 3a2 2 0 0 1 2 1.85V7h2a2 2 0 0 1 2 1.85V26a3 3 0 0 1-3 3H4a3 3 0 0 1-3-2.82V5a2 2 0 0 1 1.85-2H3zm4 6h-2v17a1 1 0 0 0 2 .12V26zm-4-4H3v21a1 1 0 0 0 .88 1H25zM13 21v2H7v-2zm8 0v2h-6v-2zm-8-4v2H7v-2zm8 0v2h-6v-2zm0-8v6H7V9zm-2 2H9v2h10z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="block-description">
+                  <p>Change the date or time of your Experience reservation</p>
+                </div>
+              </div>
+
+              <div class="search-menu__article search-menu__items">
+                <div class="block-image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                    focusable="false" style="display: block; height: 24px; width: 24px; fill: currentcolor;">
+                    <path
+                      d="M25 3a2 2 0 0 1 2 1.85V7h2a2 2 0 0 1 2 1.85V26a3 3 0 0 1-3 3H4a3 3 0 0 1-3-2.82V5a2 2 0 0 1 1.85-2H3zm4 6h-2v17a1 1 0 0 0 2 .12V26zm-4-4H3v21a1 1 0 0 0 .88 1H25zM13 21v2H7v-2zm8 0v2h-6v-2zm-8-4v2H7v-2zm8 0v2h-6v-2zm0-8v6H7V9zm-2 2H9v2h10z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="block-description">
+                  <p>If your Host cancels your reservation</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="header-buttons">
+          <button class="btn btn-icon">
+            <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="9" cy="9" r="8" stroke="#222" stroke-width="1.5" />
+              <ellipse cx="9" cy="9" rx="3" ry="8" stroke="#222" stroke-width="1.5" />
+              <line x1="1" y1="9.25" x2="17" y2="9.25" stroke="#222" stroke-width="1.5" />
+            </svg>
+          </button>
+
+          <fieldset class="switcher">
+            <input type="checkbox" class="switch">
+            <label for="s2"></label>
+          </fieldset>
+
+
+          <button class="dropdown-button btn">
+            <div class="icon">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+                focusable="false"
+                style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
+                <g fill="none" fill-rule="nonzero">
+                  <path d="m2 16h28"></path>
+                  <path d="m2 24h28"></path>
+                  <path d="m2 8h28"></path>
+                </g>
+              </svg>
+            </div>
+
+            <div class="avatar">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+                focusable="false" style="display: block; height: 100%; width: 100%; fill: currentcolor;">
+                <path
+                  d="m16 .7c-8.437 0-15.3 6.863-15.3 15.3s6.863 15.3 15.3 15.3 15.3-6.863 15.3-15.3-6.863-15.3-15.3-15.3zm0 28c-4.021 0-7.605-1.884-9.933-4.81a12.425 12.425 0 0 1 6.451-4.4 6.507 6.507 0 0 1 -3.018-5.49c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5a6.513 6.513 0 0 1 -3.019 5.491 12.42 12.42 0 0 1 6.452 4.4c-2.328 2.925-5.912 4.809-9.933 4.809z">
+                </path>
+              </svg>
+              <!-- <img src="images/header/avatar.jpg" alt="avatar"> -->
+            </div>
+
+            <div class="dropdown-menu">
+              <a href="#">
+                <b>Log in</b>
+              </a>
+              <a href="#">Sign up</a>
+              <div class="dropdown-line"></div>
+              <a href="#">Airbnb your home</a>
+              <a href="help.html">Help</a>
+            </div>
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="help-details">
+      <div class="container">
+        <div class="wrapper-1">
+         
+        <nav class="help-details__nav">
+          <a href="#">
+            <span>Home</span>
+          </a>
+            <span class="help-details__nav__svg">
+              <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 32 32"
+               aria-hidden="true"
+               role="presentation"
+               focusable="false"
+               style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 2.66667; overflow: visible;">
+               <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28">
+               </path>
+              </svg>
+            </span>
+            <span class="help-details__nav__text">
+              Accessing your account
+            </span>
+        </nav>
+
+        <div class="help-details__block">
+
+          <div class="help-details__leftside">
+            <span>
+              Guide
+            </span>
+            <h2>
+              Accessing your account
+            </h2>
+            <div class="help-details__image">
+              <img src="images/cards/help-image2.jpg" alt="image">
+            </div>
+            <p>
+              Do you need help getting into your account?
+              Want to update your profile or edit your account?
+              No problem! Here you’ll find info on how to reset your
+              password, upload a new profile pic, or change your email address.
+            </p>
+            <h3>
+              Troubleshooting account issues
+            </h3>
+            <div class="line-bottom">
+            <p>
+              If you’re having trouble signing in to your account,
+              try resetting your password (it’s easy—head to the <a href="#">reset password page</a>).
+            </p>
+            <p>
+              If you can’t find reservation info once you log in,
+              there’s a chance you may have two Airbnb accounts.
+              If you do have two accounts, unfortunately we can’t 
+              combine them, so choose the one you’d like to keep 
+              and delete the other account (just be aware that any
+              pending reservations on that account will be canceled).
+              It’ll make things easier the next time you book or host.
+            </p>
+            </div>
+            <div class="line-bottom">
+              <a href="#">
+              Change or reset your password
+              </a>
+              <p>
+              Details on how to reset your password or create a new one.
+              </p>
+            </div>
+            <div class="line-bottom">
+              <a href="#">
+                Merging multiple accounts
+              </a>
+              <p>
+                How to decide which account to keep if you accidentally end up with two.
+              </p>
+            </div>
+            <div class="line-bottom">
+              <a href="#">
+                Deactivating or deleting your account
+              </a>
+              <p>
+                Find info on temporary deactivation or permanent deletion of an Airbnb account.
+              </p>
+            </div>
+            
+          </div>
+
+          <div class="help-details__rightside">
+              <div class="help-details__log-in">
+                <p>Get help with your reservations, account, and more.
+                </p>
+                <a href="https://www.airbnb.co.uk/login?redirect_url=/help" class="btn btn-airbnb" target="_blank">
+                  <span>Log in or sign up</span>
+                </a>
+              </div>
+          </div>
+
+        </div>
+       
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <nav class="footer-top__column">
+          <h3>Support</h3>
+
+          <a class="footer-link" href="#" target="_blank">Help Center</a>
+          <a class="footer-link" href="#" target="_blank">Air Cover</a>
+          <a class="footer-link" href="#" target="_blank">Supporting people with disabilities</a>
+          <a class="footer-link" href="#" target="_blank">Cancellation options</a>
+          <a class="footer-link" href="#" target="_blank">Airbnb's actions during the pandemic</a>
+          <a class="footer-link" href="#" target="_blank">Report a neighbourhood concern</a>
+        </nav>
+
+        <nav class="footer-top__column">
+          <h3>Community</h3>
+
+          <a class="footer-link" href="#" target="_blank">Airbnb.org: disaster relief housing</a>
+          <a class="footer-link" href="#" target="_blank">Combating discrimination</a>
+        </nav>
+
+        <nav class="footer-top__column">
+          <h3>Hosting</h3>
+
+          <a class="footer-link" href="#" target="_blank">Airbnb your home</a>
+          <a class="footer-link" href="#" target="_blank">AirCover for Hosts</a>
+          <a class="footer-link" href="#" target="_blank">Explore hosting resources</a>
+          <a class="footer-link" href="#" target="_blank">Visit our community forum</a>
+          <a class="footer-link" href="#" target="_blank">How to host responsibly</a>
+        </nav>
+
+        <nav class="footer-top__column">
+          <h3>Airbnb</h3>
+
+          <a class="footer-link" href="#" target="_blank">Newsroom</a>
+          <a class="footer-link" href="#" target="_blank">Learn about new features</a>
+          <a class="footer-link" href="#" target="_blank">Letter from our founders</a>
+          <a class="footer-link" href="#" target="_blank">Careers</a>
+          <a class="footer-link" href="#" target="_blank">Investors</a>
+          <a class="footer-link" href="#" target="_blank">Gift cards</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <nav class="footer-bottom__row">
+          <h3>© 2023 Airbnb, Inc.</h3>
+          <a class="footer-link ml-8px" href="#" target="_blank">Privacy</a>
+          <a class="footer-link ml-8px" href="#" target="_blank">Terms</a>
+          <a class="footer-link ml-8px" href="#" target="_blank">Site Map</a>
+          <a class="footer-link ml-8px" href="#" target="_blank">Company details<a>
+        </nav>
+
+        <nav class="footer-bottom__row">
+          <button class="btn btn-ghost btn-icon">
+            <svg class="mr-5" width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="9" cy="9" r="8" stroke="#222222" stroke-width="1.5" />
+              <ellipse cx="9" cy="9" rx="3" ry="8" stroke="#222222" stroke-width="1.5" />
+              <line x1="1" y1="9.25" x2="17" y2="9.25" stroke="#222222" stroke-width="1.5" />
+            </svg>
+            Russian (RU)
+          </button>
+          <button class="btn btn-ghost">
+            <span class="mr-5">₽</span>
+            RUB
+          </button>
+
+          <a class="mr-8" href="#" target="_blank">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+              style="display:block;height:18px;width:18px;fill:#4848fa" aria-label="Open Facebook" role="img"
+              focusable="false">
+              <path
+                d="m30 0c.5304 0 1.0391.210714 1.4142.585786.3751.375073.5858.883784.5858 1.414214v28c0 .5304-.2107 1.0391-.5858 1.4142s-.8838.5858-1.4142.5858h-28c-.53043 0-1.039141-.2107-1.414214-.5858-.375072-.3751-.585786-.8838-.585786-1.4142v-28c0-.53043.210714-1.039141.585786-1.414214.375073-.375072.883784-.585786 1.414214-.585786z">
+              </path>
+              <path
+                d="m22.9375 16h-4.438v-3.001c0-1.266.62-2.499 2.607-2.499h2.018v-3.938s-1.831-.312-3.582-.312c-3.654 0-6.043 2.215-6.043 6.225v3.525h-4.06298v4.625h4.06298v11.375h5v-11.375h3.728z"
+                fill="#fff">
+              </path>
+            </svg>
+          </a>
+
+          <a class="mr-8" href="#" target="_blank">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+              style="display:block;height:18px;width:18px;fill:white;" aria-label="Open &quot;VKontakte&quot;"
+              role="img" focusable="false">
+              <g>
+                <path
+                  d="m30 0c.5304 0 1.0391.210714 1.4142.585786.3751.375073.5858.883784.5858 1.414214v28c0 .5304-.2107 1.0391-.5858 1.4142s-.8838.5858-1.4142.5858h-28c-.53043 0-1.039141-.2107-1.414214-.5858-.375072-.3751-.585786-.8838-.585786-1.4142v-28c0-.53043.210714-1.039141.585786-1.414214.375073-.375072.883784-.585786 1.414214-.585786z"
+                  fill="#648dda"></path>
+                <path
+                  d="m17.0718 23.9756c-8.19992 0-12.87692-5.6214-13.0718-14.9756h4.10743c.13492 6.8657 3.16297 9.7739 5.56147 10.3735v-10.3735h3.8677v5.9213c2.3685-.2548 4.8567-2.9532 5.6962-5.9213h3.8676c-.6446 3.6577-3.3429 6.356-5.2617 7.4653 1.9188.8995 4.992 3.253 6.1613 7.5103h-4.2575c-.9144-2.8482-3.1928-5.0518-6.2059-5.3516v5.3516z"
+                  fill="#fff">
+                </path>
+              </g>
+            </svg>
+          </a>
+
+          <a class="mr-8" href="#" target="_blank">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+              style="display:block;height:18px;width:18px;fill:#45c0c9;" aria-label="Open Twitter" role="img"
+              focusable="false">
+              <path
+                d="m32 4v24c0 2.209139-1.790861 4-4 4h-24c-2.209139 0-4-1.790861-4-4v-24c0-2.209139 1.790861-4 4-4h24c2.209139 0 4 1.790861 4 4z">
+              </path>
+              <path
+                d="m18.664 7.985c-.8591.45781-1.5466 1.18188-1.9594 2.0636-.4127.8817-.5283 1.8734-.3296 2.8264-3.5-.188-6.875-1.813-9.063-4.625-.29765.47541-.49825 1.00504-.59024 1.55834-.09199.55336-.07354 1.11936.05428 1.66546.12782.5462.36249 1.0616.69047 1.5166.32797.4551.74278.8407 1.22049 1.1346-.687 0-1.374-.125-2-.438.063 2.063 1.5 3.876 3.5 4.313-.624.188-1.312.188-2 .063.626 1.812 2.313 3.062 4.188 3.125-1.813 1.5-4.25 2.187-6.563 1.812 1.93253 1.2895 4.18757 2.0119 6.5096 2.0855 2.3221.0736 4.6184-.5047 6.6286-1.6692 2.0103-1.1646 3.6543-2.8689 4.7456-4.9198 1.0913-2.051 1.5864-4.3666 1.4292-6.6845.875-.624 1.625-1.374 2.188-2.312-.75.375-1.625.625-2.5.75.937-.563 1.625-1.438 2-2.5-.875.5-1.813.875-2.813 1.063-.6801-.6967-1.5679-1.15401-2.53-1.3033-.9621-.1493-1.9467.01748-2.806.4753z"
+                fill="#fff">
+              </path>
+            </svg>
+          </a>
+
+          <a class="mr-8" href="#" target="_blank">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+              style="display:block;height:18px;width:18px;fill:#f87999;" aria-label="Open Instagram" role="img"
+              focusable="false">
+              <path
+                d="m30 0h-28c-1.10457 0-2 .89543-2 2v28c0 1.1046.89543 2 2 2h28c1.1046 0 2-.8954 2-2v-28c0-1.10457-.8954-2-2-2z">
+              </path>
+              <path
+                d="m15.714 4h1.244c2.399.003 2.847.02 3.99.072 1.277.058 2.15.261 2.912.558.79.307 1.459.717 2.126 1.384.6105.59958 1.0828 1.32512 1.384 2.126l.023.058c.28.74.473 1.587.532 2.805l.019.404c.044 1.01.056 1.626.056 4.4v.912c-.002 2.61-.018 3.05-.072 4.229-.058 1.277-.261 2.15-.558 2.912-.3012.8009-.7735 1.5264-1.384 2.126-.5996.6105-1.3251 1.0828-2.126 1.384l-.058.023c-.74.28-1.587.473-2.805.532l-.404.019c-1.01.044-1.626.056-4.4.056h-.912c-2.61-.002-3.05-.018-4.229-.072-1.277-.058-2.15-.261-2.912-.558-.80088-.3012-1.52642-.7735-2.126-1.384-.61048-.5996-1.08279-1.3251-1.384-2.126l-.023-.058c-.28-.74-.473-1.587-.533-2.805l-.016-.367c-.045-1.02-.058-1.616-.058-4.344v-1.003c.002-2.612.018-3.051.072-4.23.058-1.261.256-2.128.547-2.884l.011-.03c.30133-.80054.77364-1.52572 1.384-2.125.59956-.61048 1.3251-1.08279 2.126-1.384l.058-.023c.74-.28 1.587-.473 2.805-.533l.367-.016c1.02-.045 1.616-.058 4.344-.058zm.91 2.162h-1.248c-2.304.002-2.908.013-3.81.052l-.415.018c-1.17.053-1.805.249-2.228.413-.56.218-.96.478-1.38.898-.411.411-.67.803-.884 1.345l-.024.062c-.162.423-.35 1.056-.403 2.2l-.02.45c-.038.905-.049 1.53-.05 3.945v1.08c.002 2.636.016 3.046.07 4.224l.004.074c.058 1.123.248 1.74.41 2.154.217.56.477.96.897 1.38.411.411.803.67 1.345.884l.062.024c.423.162 1.056.35 2.2.403l.45.02c.904.038 1.53.049 3.945.05h1.08c2.636-.002 3.046-.016 4.224-.07l.074-.004c1.123-.058 1.74-.248 2.154-.41.5214-.1919.993-.4984 1.38-.897.411-.411.67-.803.884-1.345l.024-.062c.162-.423.35-1.056.403-2.201l.02-.448c.038-.906.049-1.531.05-3.946v-1.08c-.002-2.636-.016-3.046-.07-4.224l-.004-.074c-.058-1.123-.248-1.74-.41-2.154-.1921-.52125-.4986-.99281-.897-1.38-.3781-.38966-.8373-.69145-1.345-.884l-.062-.024c-.418-.16-1.042-.347-2.164-.401l-.453-.02c-.901-.04-1.505-.05-3.809-.052zm-.624 3.676c.8092 0 1.6105.15939 2.3581.4691.7476.3096 1.4269.7635 1.9991 1.3357s1.0261 1.2515 1.3357 1.9991c.3097.7476.4691 1.5489.4691 2.3581s-.1594 1.6105-.4691 2.3581c-.3096.7476-.7635 1.4269-1.3357 1.9991s-1.2515 1.0261-1.9991 1.3357c-.7476.3097-1.5489.4691-2.3581.4691-1.6343 0-3.2016-.6492-4.3572-1.8048s-1.8048-2.7229-1.8048-4.3572.6492-3.2016 1.8048-4.3572 2.7229-1.8048 4.3572-1.8048zm0 2.162c-1.0609 0-2.0783.4214-2.8284 1.1716-.7502.7501-1.1716 1.7675-1.1716 2.8284s.4214 2.0783 1.1716 2.8284c.7501.7502 1.7675 1.1716 2.8284 1.1716s2.0783-.4214 2.8284-1.1716c.7502-.7501 1.1716-1.7675 1.1716-2.8284s-.4214-2.0783-1.1716-2.8284c-.7501-.7502-1.7675-1.1716-2.8284-1.1716zm6.406-3.846c.1891 0 .3764.03725.5511.10961.1747.07237.3334.17844.4671.31216.1338.13371.2398.29246.3122.46717.0724.1747.1096.36196.1096.55106s-.0372.37636-.1096.5511c-.0724.1747-.1784.3334-.3122.4671-.1337.1338-.2924.2398-.4671.3122s-.362.1096-.5511.1096c-.3819 0-.7482-.1517-1.0182-.4218-.2701-.27-.4218-.63629-.4218-1.0182s.1517-.74818.4218-1.01823c.27-.27006.6363-.42177 1.0182-.42177z"
+                fill="#fff"></path>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme-switcher.js"></script>
+  <script type="module" src="js/help.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

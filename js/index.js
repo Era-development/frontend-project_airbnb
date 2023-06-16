@@ -7,6 +7,8 @@ window.addEventListener('load', () => {
   })
 })
 
+
+
 /* button-airbnb */
 const buttonsAirBnb = document.querySelectorAll('.btn-airbnb');
 

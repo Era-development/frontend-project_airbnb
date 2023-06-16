@@ -168,14 +168,15 @@
         <div class="wrapper-1">
           <h1 class="help-page">Hi, how can we help?</h1>
 
-          <div class="tabs">
+          <div class="tabs skeleton">
 
-            <button type="button" class="button-tabs tabs-active">Guest</button>
-            <button type="button" class="button-tabs">Host</button>
-            <button type="button" class="button-tabs">Experience Host</button>
-            <button type="button" class="button-tabs">Travel admin</button>
+            <button type="button" class="tabs-btn tabs-btn__active" data-tabs-path="guest">Guest</button>
+            <button type="button" class="tabs-btn" data-tabs-path="host">Host</button>
+            <button type="button" class="tabs-btn" data-tabs-path="experience">Experience Host</button>
+            <button type="button" class="tabs-btn" data-tabs-path="travel">Travel admin</button>
 
           </div>
+
           <div class="log-in_info">
 
             <div class="log-in_text">
@@ -189,76 +190,304 @@
 
           </div>
 
-          <div class="guide">
-            <div class="guide-info">
-              <h3>Guides for getting started</h3>
-              <a href="https://www.airbnb.co.uk/help/all-topics?audience=home_host" class="guide-link" target="_blank">
-                <span>
-                  Browse all topics
-                </span>
-                <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
-                    focusable="false"
-                    style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
-                    <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28">
-                    </path>
-                  </svg>
-                </span>
-              </a>
+          <div class="tabs-content tabs-content__active skeleton" data-tabs-target="guest">
+            <div class="guide">
+              <div class="guide-info">
+                <h3 class="guide-info__title">Guides for getting started 1</h3>
+                <a href="https://www.airbnb.co.uk/help/all-topics?audience=home_host" class="guide-link"
+                  target="_blank">
+                  <span>
+                    Browse all topics
+                  </span>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                      focusable="false"
+                      style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                      <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28">
+                      </path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+
+              <div class="flex-start flex-start__help">
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image1.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Getting started with Airbnb 1</h3>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image2.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Accessing your account 1</h3>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image3.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Help with a reservation 1</h3>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image4.png" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Getting protected through AirCover 1</h3>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
             </div>
 
+          </div>
 
-            <div class="flex-start">
-
-              <div class="guide-wrapper">
-                <a href="#" target="_blank">
-                  <div class="guide-image">
-                    <img src="images/cards/help-image1.jpg" alt="image">
-                  </div>
-                  <h3>Getting started with Airbnb</h3>
+          <div class="tabs-content" data-tabs-target="host">
+            <div class="guide">
+              <div class="guide-info">
+                <h3 class="guide-info__title">Guides for getting started 2</h3>
+                <a href="https://www.airbnb.co.uk/help/all-topics?audience=home_host" class="guide-link"
+                  target="_blank">
+                  <span>
+                    Browse all topics
+                  </span>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                      focusable="false"
+                      style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                      <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28">
+                      </path>
+                    </svg>
+                  </span>
                 </a>
               </div>
 
-              <div class="guide-wrapper">
-                <a href="#" target="_blank">
-                  <div class="guide-image">
-                    <img src="images/cards/help-image2.jpg" alt="image">
-                  </div>
-                  <h3>Accessing your account</h3>
+              <div class="flex-start flex-start__help">
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image5.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Getting started with Airbnb 2</h3>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image6.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Accessing your account 2</h3>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image7.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Help with a reservation 2</h3>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image8.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Getting protected through AirCover 2</h3>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tabs-content" data-tabs-target="experience">
+            <div class="guide">
+              <div class="guide-info">
+                <h3 class="guide-info__title">Guides for getting started 3</h3>
+                <a href="https://www.airbnb.co.uk/help/all-topics?audience=home_host" class="guide-link"
+                  target="_blank">
+                  <span>
+                    Browse all topics
+                  </span>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                      focusable="false"
+                      style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                      <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28">
+                      </path>
+                    </svg>
+                  </span>
                 </a>
               </div>
 
-              <div class="guide-wrapper">
-                <a href="#" target="_blank">
-                  <div class="guide-image">
-                    <img src="images/cards/help-image3.jpg" alt="image">
-                  </div>
-                  <h3>Help with hosting</h3>
+              <div class="flex-start flex-start__help">
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image9.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Getting started with Airbnb 3</h3>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image10.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Accessing your account 3</h3>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image11.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Help with a reservation 3</h3>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image12.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Getting protected through AirCover 3</h3>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tabs-content" data-tabs-target="travel">
+            <div class="guide">
+              <div class="guide-info">
+                <h3 class="guide-info__title">Guides for getting started 4</h3>
+                <a href="https://www.airbnb.co.uk/help/all-topics?audience=home_host" class="guide-link"
+                  target="_blank">
+                  <span>
+                    Browse all topics
+                  </span>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+                      focusable="false"
+                      style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                      <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28">
+                      </path>
+                    </svg>
+                  </span>
                 </a>
               </div>
 
-              <div class="guide-wrapper">
-                <a href="#" target="_blank">
-                  <div class="guide-image">
-                    <img src="images/cards/help-image4.jpg" alt="image">
-                  </div>
-                  <h3>Getting paid</h3>
-                </a>
+              <div class="flex-start flex-start__help">
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image5.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Getting started with Airbnb 4</h3>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image9.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Accessing your account 4</h3>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image3.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Help with a reservation 4</h3>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="card-wrapper card-wrapper__help">
+                  <a href="help-details.html" target="_blank" rel="noopener noreferrer nofollow">
+                    <div class="card">
+                      <div class="card-image card-image__help">
+                        <img src="images/cards/help-image7.jpg" alt="image">
+                      </div>
+                      <h3 class="card-text__help">Getting protected through AirCover 4</h3>
+                    </div>
+                  </a>
+                </div>
+
               </div>
 
             </div>
 
           </div>
 
-        </div>
+          <h3 class="guide-info__title">Top article</h3>
 
+          <div class="swiper">
+            <div class="swiper-wrapper skeleton">
+              <!-- вставка данных по карточкам через JS  -->
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+
+        </div>
       </div>
     </section>
-
-    </div>
-
   </main>
-
 
   <footer class="footer">
     <div class="container">
@@ -387,6 +616,8 @@
     </div>
   </footer>
 
+
+  <script src="lib/swiper.js"></script>
   <script src="js/theme-switcher.js"></script>
   <script type="module" src="js/help.js"></script>
 

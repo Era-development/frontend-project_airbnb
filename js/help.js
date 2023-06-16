@@ -1,3 +1,84 @@
+/* карточки */
+const fetchData = () => {
+  return fetch('../data.json')
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return res.json();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      return [];
+    });
+};
+
+const renderData = async () => {
+  try {
+    const products = await fetchData();
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+    if (swiperWrapper) {
+      products.forEach(product => {
+        const div = document.createElement('div');
+        div.classList.add('swiper-slide');
+
+        div.innerHTML = `
+        <div class="array-wrapper">
+        <a href="https://www.airbnb.co.uk/help/article/823?id=${product?.id}" target="_blank" rel="noopener noreferrer nofollow">
+        <div class="card-array">
+          <h3 class="card-text__name">${product?.name}</h3>
+          <p class="card-text__description">${product?.description}</p>
+       </div>
+       </a>
+      </div>
+      <div class="array-wrapper">
+        <a href="https://www.airbnb.co.uk/help/article/823?id=${product?.id}" target="_blank" rel="noopener noreferrer nofollow">
+        <div class="card-array">
+          <h3 class="card-text__name">${product?.name2}</h3>
+          <p class="card-text__description">${product?.description2}</p>
+       </div>
+       </a>
+      </div>
+        `;
+
+        swiperWrapper.appendChild(div);
+      });
+    } else {
+      console.error('Element with class "swiper-wrapper" not found');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+
+  initSwiper();
+};
+
+
+/* слайдер */
+function initSwiper() {
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+    },
+  });
+}
+
+document.addEventListener('DOMContentLoaded', renderData);
+
+/* skeletons */
+const allSkeletons = document.querySelectorAll('.skeleton');
+
+window.addEventListener('load', () => {
+  allSkeletons.forEach(element => {
+    element.classList.remove('skeleton');
+  })
+})
+
+
 /* dropdown */
 const dropDownButton = document.querySelector('.dropdown-button');
 const dropDownMenu = document.querySelector('.dropdown-menu');
@@ -8,14 +89,12 @@ dropDownButton.addEventListener('click', () => {
 })
 
 
-/* клик вне пунктов меню */
+/* кли вне пунктов меню */
 document.addEventListener('click', (event) => {
-  if(!event.target.closest('.dropdown-menu') && !event.target.closest('.dropdown-button')) {
+  if (!event.target.closest('.dropdown-menu') && !event.target.closest('.dropdown-button')) {
     dropDownMenu.classList.remove('dropdown-show');
   }
 })
-
-
 
 
 /* help-search */
@@ -44,15 +123,27 @@ document.addEventListener('click', (event) => {
 
 
 /* tabs */
-const buttonTabs = document.querySelectorAll('.button-tabs');
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelector('.tabs');
+  const tabsBtn = document.querySelectorAll('.tabs-btn');
+  const tabsContent = document.querySelectorAll('.tabs-content');
 
-buttonTabs.forEach(button => {
-  button.addEventListener('click', event => {
-    document.querySelector('.button-tabs.tabs-active').classList.remove('tabs-active');
-    event.currentTarget.classList.add('tabs-active');
-  })
+  if (tabs) {
+    tabs.addEventListener('click', (e) => {
+      if (e.target.classList.contains('tabs-btn')) {
+        const tabsPath = e.target.dataset.tabsPath;
+        tabsBtn.forEach(el => el.classList.remove('tabs-btn__active'));
+        document.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add('tabs-btn__active');
+        tabsHandler(tabsPath);
+      }
+    })
+  }
+
+  const tabsHandler = path => {
+    tabsContent.forEach(el => el.classList.remove('tabs-content__active'));
+    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs-content__active');
+  }
 })
-
 
 
 /* log-in_link */
@@ -69,4 +160,3 @@ buttonsAirBnb.forEach((link) => {
     link.style.setProperty('--mouse-y', y);
   })
 })
-

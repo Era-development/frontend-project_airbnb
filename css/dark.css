@@ -23,6 +23,10 @@
 
   --label-color: rgba(255, 255, 255, 0.38); /* цвет текста label, placeholder */
 
+  --swiper-color: #c392ff57;
+
+  --help-detail-color: var(--subtitle-color);
+
   /* dropdown */
   --dropdown-button-bg: #292929;
   --dropdown-border-color: rgba(255, 255, 255, 0.3);
@@ -135,6 +139,6 @@ textarea:focus {
   --image-color: var(--bg-hover);
 }
 
-.tabs-active::after {
+.tabs-btn__active::after {
   --tabs-after:   #7300ff ;
 }

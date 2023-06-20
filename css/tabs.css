@@ -168,7 +168,7 @@
   /* карточки на стр help с использованием специфичности */
   .flex-start__help {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
   }
 

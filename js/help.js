@@ -14,19 +14,19 @@ const renderData = () => {
     div.classList.add('swiper-slide');
 
         div.innerHTML = `
-        <div class="array-wrapper">
+        <div class="skeleton array-wrapper">
         <a href="https://www.airbnb.co.uk/help/article/823?id=${product?.id}" target="_blank" rel="noopener noreferrer nofollow">
-        <div class="card-array">
-          <h3 class="card-text__name">${product?.name}</h3>
-          <p class="card-text__description">${product?.description}</p>
+        <div class="skeleton card-array">
+          <h3 class="skeleton card-text__name">${product?.name}</h3>
+          <p class="skeleton card-text__description">${product?.description}</p>
        </div>
        </a>
       </div>
-      <div class="array-wrapper">
+      <div class="skeleton array-wrapper">
         <a href="https://www.airbnb.co.uk/help/article/823?id=${product?.id}" target="_blank" rel="noopener noreferrer nofollow">
-        <div class="card-array">
-          <h3 class="card-text__name">${product?.name2}</h3>
-          <p class="card-text__description">${product?.description2}</p>
+        <div class=" skeleton card-array">
+          <h3 class="skeleton card-text__name">${product?.name2}</h3>
+          <p class="skeleton card-text__description">${product?.description2}</p>
        </div>
        </a>
       </div>

@@ -1,27 +1,17 @@
+import { data } from './data.js';
+
 /* карточки */
-const fetchData = () => {
-  return fetch('../data.json')
-    .then(res => {
-      if (!res.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return res.json();
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      return [];
-    });
-};
+const renderData = () => {
+  const swiperWrapper = document.querySelector('.swiper-wrapper');
 
-const renderData = async () => {
-  try {
-    const products = await fetchData();
-    const swiperWrapper = document.querySelector('.swiper-wrapper');
+  if (!swiperWrapper) {
+    console.error('Element with class "swiper-wrapper" not found');
+    return;
+  }
 
-    if (swiperWrapper) {
-      products.forEach(product => {
-        const div = document.createElement('div');
-        div.classList.add('swiper-slide');
+  data.forEach(product => {
+    const div = document.createElement('div');
+    div.classList.add('swiper-slide');
 
         div.innerHTML = `
         <div class="array-wrapper">
@@ -42,18 +32,11 @@ const renderData = async () => {
       </div>
         `;
 
-        swiperWrapper.appendChild(div);
-      });
-    } else {
-      console.error('Element with class "swiper-wrapper" not found');
-    }
-  } catch (error) {
-    console.error('Error:', error);
-  }
+      swiperWrapper.appendChild(div);
+  });
 
   initSwiper();
 };
-
 
 /* слайдер */
 function initSwiper() {
@@ -69,15 +52,15 @@ function initSwiper() {
 
 document.addEventListener('DOMContentLoaded', renderData);
 
-/* skeletons */
-const allSkeletons = document.querySelectorAll('.skeleton');
 
+/* skeletons */
 window.addEventListener('load', () => {
+  const allSkeletons = document.querySelectorAll('.skeleton');
+
   allSkeletons.forEach(element => {
     element.classList.remove('skeleton');
   })
 })
-
 
 /* dropdown */
 const dropDownButton = document.querySelector('.dropdown-button');

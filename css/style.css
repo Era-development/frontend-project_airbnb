@@ -1,13 +1,8 @@
-@import "../css/fonts.css";
-@import "../css/normalize.css";
-@import "../css/forms.css";
-@import "../lib/swiper.css";
-@import "../css/modal.css";
-@import "../css/help.css";
-@import "../css/tabs.css";
-@import "../css/help-details.css";
-
-
+.header,
+.banner, 
+.footer {
+  display: none;
+}
 
 body {
   font-family: 'Messina Sans', sans-serif;
@@ -605,8 +600,12 @@ h3 {
   margin-left: 8px;
 }
 
-.flex {
+.flex,
+.flex-start {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+}
+
+.flex {
+  align-items: center;
 }

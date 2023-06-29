@@ -111,4 +111,5 @@
 
 .help-details__rightside a {
     display: inline-block;
+    width: 100%;
 }
